@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun animateView(view: ImageView) {
-        val animated = AnimatedVectorDrawableCompat.create(this, R.drawable.avd_anim_settings)
+        val animated = AnimatedVectorDrawableCompat.create(this, R.drawable.avd_anim_loader)
         animated?.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
             override fun onAnimationEnd(drawable: Drawable?) {
                 //Loop animation
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         })
         view.setImageDrawable(animated)
         //Put the color you want
-        //view.setColorFilter(Color.BLACK)
+        view.setColorFilter(Color.BLACK)
         //Start animation
         animated?.start()
     }
